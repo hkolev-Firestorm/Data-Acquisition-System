@@ -101,7 +101,7 @@ try:
         if ser.in_waiting > 0:
             data = ser.readline().decode().strip()
             if data:
-                print(f"Received data: {(float(data) - zero_offset):.3f} ?? & {(time.time() - start_time):.3f} s")  # Debug print
+                print(f"Received data: {(float(data) - zero_offset):.3f} g & {(time.time() - start_time):.3f} s")  # Debug print
                 try:
                     numeric_data = float(data) - zero_offset
                     x_data.append(len(x_data) + 1)
